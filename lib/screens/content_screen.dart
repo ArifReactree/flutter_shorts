@@ -5,9 +5,10 @@ import 'package:flutter_shorts/screens/options_screen.dart';
 import 'package:video_player/video_player.dart';
 
 class ContentScreen extends StatefulWidget {
-  final String? src;
+  final dynamic src;
+  final String? imageSRC;
 
-  const ContentScreen({Key? key, this.src}) : super(key: key);
+  const ContentScreen({Key? key, this.src, this.imageSRC}) : super(key: key);
 
   @override
   _ContentScreenState createState() => _ContentScreenState();
@@ -24,12 +25,13 @@ class _ContentScreenState extends State<ContentScreen> {
   }
 
   Future initializePlayer() async {
-    _videoPlayerController = VideoPlayerController.network(widget.src!);
+    _videoPlayerController =
+        VideoPlayerController.network(widget.src.toString());
     await Future.wait([_videoPlayerController.initialize()]);
     _chewieController = ChewieController(
       videoPlayerController: _videoPlayerController,
       autoPlay: true,
-      showControls: false,
+      showControls: true,
       looping: true,
     );
     setState(() {});
@@ -38,7 +40,7 @@ class _ContentScreenState extends State<ContentScreen> {
   @override
   void dispose() {
     _videoPlayerController.dispose();
-    _chewieController!.dispose();
+    // _chewieController!.dispose();
     super.dispose();
   }
 
