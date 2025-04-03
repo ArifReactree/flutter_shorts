@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shorts/screens/aws.dart';
+import 'package:flutter_shorts/screens/bunny_cdn.dart';
 import 'package:flutter_shorts/screens/da_cast.dart';
 import 'package:flutter_shorts/screens/vadoo_screen.dart';
 
@@ -55,6 +56,14 @@ class ChoiceScreen extends StatelessWidget {
               },
               child: Text(
                 "AWS",
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(BunnyCdn.id);
+              },
+              child: Text(
+                "Bunny CDN",
               ),
             ),
           ],

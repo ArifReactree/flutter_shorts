@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shorts/screens/aws.dart';
+import 'package:flutter_shorts/screens/bunny_cdn.dart';
 import 'package:flutter_shorts/screens/choice_screen.dart';
 import 'package:flutter_shorts/screens/da_cast.dart';
 import 'package:flutter_shorts/screens/google-cdn.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         DaCast.id:(context) => DaCast(),
         VadooScreen.id:(context) => VadooScreen(),
         GoogleCDN.id:(context) => GoogleCDN(),
-        AWS.id:(context) => AWS()
+        AWS.id:(context) => AWS(),
+        BunnyCdn.id:(context) => BunnyCdn(),
       },
     );
   }

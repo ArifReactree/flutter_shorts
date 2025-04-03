@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'package:preload_page_view/preload_page_view.dart';
+// import 'package:preload_page_view/preload_page_view.dart';
 
 class VadooScreen extends StatefulWidget {
   const VadooScreen({Key? key}) : super(key: key);
@@ -19,14 +19,7 @@ class _VadooScreenState extends State<VadooScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: PreloadPageView.builder(
-      preloadPagesCount: webViews.length,
-      scrollDirection: Axis.vertical,
-      itemBuilder: (context, index) {
-        return WebViewWidgets(html: webViews[index]);
-      },
-      itemCount: webViews.length,
-    ));
+        body: Center());
   }
 }
 

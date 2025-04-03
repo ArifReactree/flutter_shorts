@@ -1,4 +1,4 @@
-import 'package:card_swiper/card_swiper.dart';
+// import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shorts/screens/content_screen.dart';
 
@@ -28,16 +28,16 @@ class _MuviPageState extends State<MuviPage> {
           child: Stack(
             children: [
               //We need swiper for every content
-              Swiper(
-                // physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (BuildContext context, int index) {
-                  return ContentScreen(
-                    src: videos[index],
-                  );
-                },
-                itemCount: videos.length,
-                scrollDirection: Axis.vertical,
-              ),
+              // Swiper(
+              //   // physics: NeverScrollableScrollPhysics(),
+              //   itemBuilder: (BuildContext context, int index) {
+              //     return ContentScreen(
+              //       src: videos[index],
+              //     );
+              //   },
+              //   itemCount: videos.length,
+              //   scrollDirection: Axis.vertical,
+              // ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
